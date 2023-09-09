@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% from 'fifth/fifth_utils.j2' import databox %}
+
+{% block title %}Edit Page - Fifth{% endblock %}
+
+{% block heading %}Edit Page - Fifth{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <p class="display-5">Edit country - <b>{{ country.country_name }}</b></p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12">
+        <form action="{{ url_for('fifth.edit', cid=country.id) }}" method="POST">
+        <table class="table table-sm table-bordered small">
+            <tbody>
+                <tr>
+                    <td>
+                        {{ databox('country_name', 'Country Name', country.country_name) }}
+                    </td>
+                    <td>
+                        {{ databox('city_name', 'City', country.city_name) }}
+                    </td>
+                    <td>
+                        {{ databox('population', 'Population', country.population) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ databox('area', 'Area', country.area) }}
+                    </td>
+                    <td>
+                        {{ databox('currency', 'Currency', country.currency) }}
+                    </td>
+                    <td>
+                        {{ databox('continent', 'Continent', country.continent) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ databox('time_zone', 'Time Zone', country.time_zone) }}
+                    </td>
+                    <td>
+                        {{ databox('language', 'Language', country.language) }}
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary mt-3" id="submit" name="submit">Update Country</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

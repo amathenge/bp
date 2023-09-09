@@ -1,0 +1,7 @@
+# a disabled text box with a label on the top.
+{% macro databox(item, label, value) -%}
+<div class="form-group bg-secondary bg-opacity-25">
+    <label for="{{ item }}" class="form-label"><b>{{ label }}</b></label>
+    <input type="text" class="form-control" id="{{ item }}" name="{{ item }}" value="{% if value %}{{ value }}{% else %}&nbsp;{% endif %}">
+</div>
+{%- endmacro %}

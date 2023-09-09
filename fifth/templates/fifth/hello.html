@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Hello Page - Fifth{% endblock %}
+
+{% block heading %}Hello Page - Fifth{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <p class="display-5">You are at the <b>hello</b> page in the <b>fifth</b> module</p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        {% if message %}
+        {{ message }}
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <p>This hello.html page from the <u>fifth module</u> has this additional line. <br>This should have
+            been called from the view/function.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 justify-content-center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Population</th>
+                    <th scope="col">Area</th>
+                    <th scope="col">Currency</th>
+                    <th scope="col">Continent</th>
+                    <th scope="col">Time Zone</th>
+                    <th scope="col">Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for country in countries %}
+                <tr>
+                    <td><a href="{{ url_for('fifth.edit', cid=country.id) }}">{{ country.id }}</a></td>
+                    <td>{{ country.country_name }}</td>
+                    <td>{{ country.city_name }}</td>
+                    <td>{{ country.population }}</td>
+                    <td>{{ country.area }}</td>
+                    <td>{{ country.currency }}</td>
+                    <td>{{ country.continent }}</td>
+                    <td>{{ country.time_zone }}</td>
+                    <td>{{ country.language }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

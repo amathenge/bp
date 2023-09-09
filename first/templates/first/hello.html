@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Hello Page - First{% endblock %}
+
+{% block heading %}Hello Page - First{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <p class="display-5">You are at the <b>hello</b> page in the <b>first</b> module</p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        {% if message %}
+        {{ message }}
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <p>This hello.html page from the first module has this additional line. This should have
+            been called from the view/function.
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}

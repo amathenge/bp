@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page - Third{% endblock %}
+
+{% block heading %}Home Page - Third{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <p class="display-5">You are at the home page - <b>third</b> module</p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        {% if message %}
+        {{ message }}
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <p>This home.html page from the second module has this additional line. <br>And we're displaying data from a database/p>
+    </div>
+</div>
+
+{% endblock %}

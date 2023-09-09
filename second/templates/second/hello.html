@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Hello Page - Second{% endblock %}
+
+{% block heading %}Hello Page - Second{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <p class="display-5">You are at the <b>hello</b> page in the <b>second</b> module</p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        {% if message %}
+        {{ message }}
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <p>This hello.html page from the second module has this additional line. <br>This should have
+            been called from the view/function.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 justify-content-center">
+        <img src="{{ url_for('second.static', filename='second/tony_kibo.jpeg') }}" class="img-fluid img-thumbnail" alt="Tony Kibo">
+    </div>
+</div>
+
+
+{% endblock %}
