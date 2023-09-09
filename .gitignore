@@ -1,0 +1,4 @@
+*.sql
+**/__pycache__/**
+*.db
+cred.py
