@@ -26,7 +26,7 @@
             <a href="{{ url_for('third.hello') }}" class="list-group-item list-group-item-action">database list from <b>third</b> module</a>
             <a href="{{ url_for('fourth.hello') }}" class="list-group-item list-group-item-action">another database list from <b>fourth</b> module</a>
             <a href="{{ url_for('fifth.hello') }}" class="list-group-item list-group-item-action">Data form from <b>fifth</b> module</a>
-            <a href="#" class="list-group-item list-group-item-action">Login form from <b>sixth</b> module</a>
+            <a href="{{ url_for('sixth.login') }}" class="list-group-item list-group-item-action">Login form from <b>sixth</b> module</a>
         </div>
     </div>
     <div class="col-6">
@@ -37,7 +37,7 @@
             <a href="{{ url_for('third.home') }}" class="list-group-item list-group-item-action">home page of <b>third</b> module</a>
             <a href="{{ url_for('fourth.home') }}" class="list-group-item list-group-item-action">home page of <b>fourth</b> module</a>
             <a href="{{ url_for('fifth.home') }}" class="list-group-item list-group-item-action">home page of <b>fifth</b> module</a>
-            <a href="#" class="list-group-item list-group-item-action">home page of <b>sixth</b> module</a>
+            <a href="{{ url_for('sixth.home') }}" class="list-group-item list-group-item-action">home page of <b>sixth</b> module</a>
         </div>
     </div>
 </div>

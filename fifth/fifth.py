@@ -43,7 +43,7 @@ def edit(cid):
             'time_zone': request.form['time_zone'],
             'language': request.form['language']
         }
-        sqlvalues = country.values()
+        sqlvalues = list(country.values())
         sqlvalues.append(country_id)
         sql = '''
             update countries set country_name = ?, city_name = ?, population = ?,

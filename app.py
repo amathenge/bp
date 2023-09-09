@@ -4,6 +4,7 @@ from second.second import second
 from third.third import third
 from fourth.fourth import fourth
 from fifth.fifth import fifth
+from sixth.sixth import sixth
 
 app = Flask(__name__)
 app.register_blueprint(first, url_prefix="/first")
@@ -11,6 +12,7 @@ app.register_blueprint(second, url_prefix="/second")
 app.register_blueprint(third, url_prefix="/third")
 app.register_blueprint(fourth, url_prefix="/fourth")
 app.register_blueprint(fifth, url_prefix="/fifth")
+app.register_blueprint(sixth, url_prefix="/sixth")
 
 @app.route('/', methods=['GET', 'POST'])
 def home():

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page - Sixth{% endblock %}
+
+{% block heading %}Home Page - Sixth{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 text-center">
+        <p>Success, the password for {{ user.email }} was correct.</p>
+        <p>Data from database is:<br>firstname: {{ user.firstname }}
+        <br>surname: {{ user.lastname }}</p>
+    </div>
+</div>
+
+{% endblock %}

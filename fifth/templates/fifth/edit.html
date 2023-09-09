@@ -8,7 +8,7 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-12 text-center">
-        <p class="display-5">Edit country - <b>{{ country.country_name }}</b></p>
+        <p class="display-5">Edit country - {{ country.id }}:<b>{{ country.country_name }}</b></p>
     </div>
 </div>
 <div class="row justify-content-center">
@@ -47,7 +47,8 @@
                     </td>
                     <td>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary mt-3" id="submit" name="submit">Update Country</button>
+                            <button type="submit" class="btn btn-primary mt-3 mx-2" id="submit" name="submit" value="submit">Update Country</button>
+                            <button class="btn btn-secondary mt-3 mx-2" type="submit" id="cancel" name="submit" value="cancel" formnovalidate="formnovalidate">Cancel</button>
                         </div>
                     </td>
                 </tr>
