@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
-{% block title %}Home Page - First{% endblock %}
+{% block title %}First Module{% endblock %}
 
-{% block heading %}Home Page - First{% endblock %}
+{% block heading %}First Module{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-12 text-center">
-        <p class="display-5">You are at the home page - first module</p>
+        <p class="display-5">You are in the first module</p>
     </div>
 </div>
 <div class="row justify-content-center">
     <div class="col-12 text-center">
         {% if message %}
-        {{ message }}
+        {{ message|safe }}
         {% endif %}
     </div>
 </div>
