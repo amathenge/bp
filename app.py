@@ -1,3 +1,8 @@
+# This is an example program on how to use Flask blueprints
+# Blueprints allow you to break a larger program into smaller pieces.
+# The smaller modules are easier to manage and can then also be copied from
+# App to App (e.g., a module that handles database connections)
+
 from flask import Flask, Blueprint, render_template, url_for, g
 from first.first import first
 from second.second import second
@@ -16,6 +21,6 @@ app.register_blueprint(sixth, url_prefix="/sixth")
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    message = 'This is a variable passed from the home page'
+    message = 'You are on the HOME page. <br>This is a variable passed from the home page'
     return render_template('home.html', message=message)
 
