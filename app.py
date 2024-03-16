@@ -19,6 +19,9 @@ app.register_blueprint(fourth, url_prefix="/fourth")
 app.register_blueprint(fifth, url_prefix="/fifth")
 app.register_blueprint(sixth, url_prefix="/sixth")
 
+# import helper templates (e.g., chang  e '\n' to '<br>'...)
+from access import *
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     message = 'You are on the HOME page. <br>This is a variable passed from the home page'

@@ -13,13 +13,13 @@
 <div class="row justify-content-center">
     <div class="col-12 text-center">
         {% if message %}
-        {{ message }}
+        {{ message|safe }}
         {% endif %}
     </div>
 </div>
 <div class="row">
     <div class="col-12 text-center">
-        <p>This home.html page from the second module has this additional line. <br>And we're displaying an image</p>
+        <p>This home.html page from the second module/p>
     </div>
 </div>
 

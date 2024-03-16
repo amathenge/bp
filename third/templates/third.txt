@@ -1,0 +1,4 @@
+Templates for Third module
+
+hello.html - open a database and display records.
+home.html - home page for the module

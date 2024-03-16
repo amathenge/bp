@@ -1,0 +1,4 @@
+Templates for the first module go here.
+
+home.html = home page when /first is called
+hello.html = demonstrate how variable passed can be inserted into a template

@@ -1,0 +1,4 @@
+Template files for the Second module
+
+hello.html - image example from a module
+home.html - home page of the second module

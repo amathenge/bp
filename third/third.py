@@ -23,3 +23,14 @@ def hello():
     cur.execute(sql)
     data = cur.fetchall()
     return render_template('third/hello.html', message=message, users=data)
+
+@third.route('/data', methods=['GET', 'POST'])
+def data():
+    message = 'This message is from the data module in the <b>THIRD</b> module'
+    message += '<br />Youll notice that all the data has a google email'
+    db = get_db()
+    cur = db.cursor()
+    sql = "select id, firstname, surname, email, phone, notes from users where email like '%google%'"
+    cur.execute(sql)
+    data = cur.fetchall()
+    return render_template('third/hello.html', message=message, users=data)
