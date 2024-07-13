@@ -23,7 +23,7 @@ app.register_blueprint(sixth, url_prefix="/sixth")
 from access import *
 
 @app.route('/', methods=['GET', 'POST'])
-def home():
+def app_home():
     message = 'You are on the HOME page. <br>This is a variable passed from the home page'
     return render_template('home.html', message=message)
 
