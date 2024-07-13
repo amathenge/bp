@@ -19,8 +19,10 @@ app.register_blueprint(fourth, url_prefix="/fourth")
 app.register_blueprint(fifth, url_prefix="/fifth")
 app.register_blueprint(sixth, url_prefix="/sixth")
 
-# import helper templates (e.g., chang  e '\n' to '<br>'...)
-from access import *
+# import helper templates (e.g., change '\n' to '<br>'...)
+from access import import_filters
+
+import_filters(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def app_home():
